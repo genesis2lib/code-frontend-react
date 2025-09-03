@@ -1,0 +1,146 @@
+{
+  "version": "1.0.0",
+  "metadata": {
+    "name": "code-frontend-react",
+    "kind": "code",
+    "layer": "frontend",
+    "type": "react",
+    "description": "Full-featured React frontend application with Auth0, Redux, TypeScript, Vite, and Tailwind CSS",
+    "author": "Genesis2 Code Generator",
+    "tags": [
+      "react",
+      "typescript",
+      "vite",
+      "tailwind",
+      "auth0",
+      "redux",
+      "radix-ui",
+      "wouter",
+      "frontend",
+      "spa"
+    ],
+    "documentation": "https://docs.example.com/code-frontend-react"
+  },
+  "requirements": {
+    "runtime": {
+      "node": "22.18.0"
+    },
+    "build": {
+      "npm": ">=8.0.0"
+    },
+    "compatibility": {
+      "os": [
+        "linux",
+        "darwin",
+        "windows"
+      ],
+      "arch": [
+        "x64",
+        "arm64"
+      ]
+    }
+  },
+  "generation": {
+    "baseTemplate": {
+      "source": "vite",
+      "config": {
+        "template": "react-ts",
+        "framework": "react",
+        "typescript": true
+      }
+    },
+    "directories": {
+      "create": [
+        "src/component/app",
+        "src/page",
+        "src/service",
+        "src/redux/slice",
+        "src/model",
+        "src/util",
+        "src/provider"
+      ],
+      "remove": [],
+      "rename": []
+    },
+    "files": {
+      "remove": [
+        "src/App.css",
+        "src/App.tsx"
+      ],
+      "rename": [],
+      "chmod": []
+    },
+    "dependencies": {
+      "package.json": {
+        "dependencies": {
+          "react": "^19.1.0",
+          "react-dom": "^19.1.0",
+          "@auth0/auth0-react": "^2.3.0",
+          "@radix-ui/react-toast": "^1.2.14",
+          "@radix-ui/react-navigation-menu": "^1.1.4",
+          "@radix-ui/react-separator": "^1.1.0",
+          "@reduxjs/toolkit": "^2.8.2",
+          "axios": "^1.10.0",
+          "lucide-react": "^0.525.0",
+          "react-redux": "^9.2.0",
+          "wouter": "^3.7.1"
+        },
+        "devDependencies": {
+          "@eslint/js": "^9.29.0",
+          "@types/node": "^22.10.5",
+          "@types/react-dom": "^19.1.6",
+          "@vitejs/plugin-react": "^4.5.2",
+          "autoprefixer": "^10.4.21",
+          "eslint": "^9.29.0",
+          "eslint-plugin-react-hooks": "^5.2.0",
+          "eslint-plugin-react-refresh": "^0.4.20",
+          "globals": "^16.2.0",
+          "postcss": "^8.5.6",
+          "tailwindcss": "^3.4.17",
+          "terser": "^5.43.1",
+          "typescript": "~5.8.3",
+          "typescript-eslint": "^8.34.1",
+          "vite": "^7.0.0"
+        },
+        "scripts": {
+          "dev": "vite",
+          "build": "tsc -b && vite build",
+          "build:prod": "tsc -b && vite build",
+          "build:test": "tsc -b && vite build",
+          "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+          "preview": "vite preview"
+        }
+      }
+    },
+    "transformations": {
+      "replacements": [
+        {
+          "files": [
+            "index.html"
+          ],
+          "operations": [
+            {
+              "find": "Vite + React + TS",
+              "replace": "{{project.name}}",
+              "regex": false,
+              "global": false
+            }
+          ]
+        }
+      ],
+      "jsonMerge": [
+        {
+          "file": "package.json",
+          "merge": {
+            "name": "{{project.repo}}",
+            "description": "{{project.description}}",
+            "version": "{{project.version}}",
+            "private": true,
+            "type": "module"
+          },
+          "strategy": "merge"
+        }
+      ]
+    }
+  }
+}
