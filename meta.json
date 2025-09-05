@@ -23,7 +23,7 @@
   },
   "requirements": {
     "runtime": {
-      "node": "22.18.0"
+      "node": "22.19.0"
     },
     "build": {
       "npm": ">=8.0.0"
